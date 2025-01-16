@@ -1,3 +1,2 @@
-- implement SGD, Adam
-- implement BCELoss (with logits)
-- implement the Mtensor of an array
+- regression: find why loss explodes for large NB_POINTS 
+- implement SGD, Ada, BCELoss with logits
