@@ -1,3 +1,3 @@
 # MicroTorch
 
-Basic implementation of backpropagation algorithm
+Basic implementation of machine learning algorithms, based on A. Karpathy's micrograd
