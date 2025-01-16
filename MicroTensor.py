@@ -1,5 +1,3 @@
-from math import exp, log
-
 class Mtensor():
     def __init__(self, val, _children=()):
         self.val = val
