@@ -1,4 +1,4 @@
-from MicroTensor import Mtensor
+from Scripts.MicroTensor import Mtensor
 
 class GradientDescent():
 

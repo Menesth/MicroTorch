@@ -1,14 +1,11 @@
-from MicroTensor import Mtensor 
+from Scripts.MicroTensor import Mtensor 
 
 class MSELoss():
     def __init__(self):
         pass
 
-    def __call__(self, x, y):
-        self.out = Mtensor(0.0)
-        for row_x in x:
-            for xi, yi in zip(row_x, y):
-                self.out += (yi - xi) * (yi - xi)
+    def __call__(self, yhat, y):
+        self.out = sum((yi - yhati)**2 for yi, yhati in zip(y, yhat))
         return self.out
     
     def backward(self):
