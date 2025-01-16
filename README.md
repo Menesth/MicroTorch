@@ -1,6 +1,6 @@
 # MicroTorch
 
-Implementation from scratch of a training loop using backpropagation.
+Implementation of the backpropagation progragation algorithm.
 
 Based on A. Karpathy's micrograd.
 
