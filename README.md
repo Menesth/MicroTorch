@@ -1,6 +1,6 @@
 # MicroTorch
 
-Implementations of some Torch functions from scratch.
+Implementation from scratch of Torch's backward method
 
 Based on A. Karpathy's micrograd
 
