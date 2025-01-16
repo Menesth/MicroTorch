@@ -1,5 +1,6 @@
-class Mtensor():
+from math import exp, log
 
+class Mtensor():
     def __init__(self, val, _children=()):
         self.val = val
         self.grad = 0
@@ -18,6 +19,15 @@ class Mtensor():
         out._backward = _backward
         return out
 
+    def __sub__(self, y):
+        out = Mtensor(val = self.val - y.val, _children = (self, y))
+
+        def _backward():
+            self.grad += 1.0 * out.grad
+            y.grad += -1.0 * out.grad
+        out._backward = _backward
+        return out
+
     def __mul__(self, y):
         out = Mtensor(val = self.val * y.val, _children = (self, y))
 
@@ -26,7 +36,17 @@ class Mtensor():
             y.grad += self.val * out.grad
         out._backward = _backward
         return out
-    
+
+    def ReLU(self):
+        relu = self.val if self.val > 0 else 0
+        out = Mtensor(val = relu, _children = (self, ))
+
+        def _backward():
+            if relu > 0:
+                self.grad += 1.0 * out.grad
+        out._backward = _backward
+        return out
+
     def comp_graph(self):
         graph = []
         visited = set()
