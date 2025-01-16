@@ -1,0 +1,3 @@
+- implement a Mtensor(array)
+- implement SGD, Adam
+- implement BCELoss (with logits)
