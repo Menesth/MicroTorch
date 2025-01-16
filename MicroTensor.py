@@ -1,7 +1,7 @@
 class Mtensor():
     def __init__(self, val, _children=()):
         self.val = val
-        self.grad = 0
+        self.grad = 0.0
         self._backward = lambda: None
         self._children = set(_children)
 
