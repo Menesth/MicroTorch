@@ -1,8 +1,6 @@
 # MicroTorch
 
-Implementation of the backpropagation progragation algorithm.
-
-Based on A. Karpathy's micrograd.
+Short implementation of the backpropagation algorithm.
 
 Note 1: the feature matrix X must be of shape (N, p) = (Nb samples, Nb features)
 
